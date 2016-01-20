@@ -3,8 +3,8 @@ var path = require('path');
 
 var Hapi = require('hapi');
 var Inert = require('inert');
+var ampl = require('ampl');
 
-var ampl = require('ampl.js');
 
 var css = fs.readFileSync(path.join(__dirname, './amp.css'));
 
