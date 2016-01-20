@@ -1,0 +1,28 @@
+{
+  "name": "ampl-demo",
+  "version": "1.0.0",
+  "description": "demo for ampl module",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/ampl-demo.git"
+  },
+  "keywords": [
+    "ampl",
+    "amp"
+  ],
+  "author": "des-des",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwyl/ampl-demo/issues"
+  },
+  "homepage": "https://github.com/dwyl/ampl-demo#readme",
+  "dependencies": {
+    "ampl": "^1.0.2",
+    "hapi": "^12.1.0",
+    "inert": "^3.2.0"
+  }
+}
