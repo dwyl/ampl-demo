@@ -5,8 +5,15 @@ var Hapi = require('hapi');
 var Inert = require('inert');
 var ampl = require('ampl');
 
+var getReadmes = require('../lib/getReadmes.js');
 
 var css = fs.readFileSync(path.join(__dirname, './amp.css'));
+
+var readmePages;
+getReadmes(css, (readmes) => {
+  console.log(Object.keys(readmes));
+  readmePages = readmes;
+});
 
 var port = process.env.PORT || 3000;
 var server = new Hapi.Server();
@@ -32,7 +39,14 @@ server.register(Inert, function (err) {
         return reply(ampHtml);
       });
     }
-  })
+  });
+  server.route({
+    method: 'GET',
+    path: '/dwyl/{readme}',
+    handler: function(request, reply) {
+      reply(readmePages[request.params.readme]);
+    }
+  });
 });
 
 server.start(function(){
