@@ -1,0 +1,37 @@
+{
+  "name": "ampl-demo",
+  "version": "1.0.0",
+  "description": "demo for ampl module",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/ampl-demo.git"
+  },
+  "keywords": [
+    "ampl",
+    "amp"
+  ],
+  "author": "des-des",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwyl/ampl-demo/issues"
+  },
+  "homepage": "https://github.com/dwyl/ampl-demo#readme",
+  "dependencies": {
+    "ampl": "^1.0.3",
+    "env2": "^2.0.4",
+    "hapi": "^12.1.0",
+    "htmlparser2": "^3.9.0",
+    "image-size": "^0.4.0",
+    "inert": "^3.2.0",
+    "remarkable": "^1.6.1"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "nock": "^5.2.1",
+    "tape": "^4.4.0"
+  }
+}
