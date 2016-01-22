@@ -22,9 +22,11 @@ var readmeData = [
 
 var readmesRaw = ['hey there', ' * yo'];
 
-var gh = () => nock(ghApiUrl);
+var gh = function() {
+  return nock(ghApiUrl);
+};
 
-test('mocking!', t=> {
+test('mocking!', function(t) {
   gh().get(repoReqPath).reply(200, dwylRepoNames);
   gh().get(readmePaths[0]).reply(200, readmeData[0]);
   gh().get(readmePaths[1]).reply(200, readmeData[1]);
