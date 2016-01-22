@@ -23,7 +23,7 @@ var readmeData = [
 var readmesRaw = ['hey there', ' * yo'];
 
 var gh = function() {
-  nock(ghApiUrl);
+  return nock(ghApiUrl);
 };
 
 test('mocking!', function(t) {
