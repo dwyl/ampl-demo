@@ -52,3 +52,5 @@ server.register(Inert, function (err) {
 server.start(function(){
   console.log('server listening on port', port);
 });
+
+module.exports = server;
