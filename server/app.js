@@ -11,7 +11,6 @@ var css = fs.readFileSync(path.join(__dirname, './amp.css'));
 
 var readmePages;
 getReadmes(css, (readmes) => {
-  console.log(Object.keys(readmes));
   readmePages = readmes;
 });
 
