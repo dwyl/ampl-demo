@@ -10,7 +10,7 @@ var getReadmes = require('../lib/getReadmes.js');
 var css = fs.readFileSync(path.join(__dirname, './amp.css'));
 
 var readmePages;
-getReadmes(css, (readmes) => {
+getReadmes(css, function(readmes) {
   readmePages = readmes;
 });
 
