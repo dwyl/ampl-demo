@@ -41,17 +41,16 @@ test('mocking!', function(t) {
     payload: JSON.stringify({
       md: '# ampl'
     })
-  }, res => {
+  }, function(res) {
     console.log(res.result);
     t.ok(res.result.indexOf('ampl') !== -1, 'convert endpoint contains title input')
   });
 
   setTimeout(function() {
-    server.inject('/dwyl/mocky', res => {
+    server.inject('/dwyl/mocky', function(res) {
       t.ok(res.result.indexOf('hey there') !== -1, 'woop');
       server.stop()
       t.end();
     });
   }, 2000);
-
 });
